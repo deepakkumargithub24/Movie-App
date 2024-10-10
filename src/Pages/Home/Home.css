@@ -1,0 +1,110 @@
+/* General styling for the carousel poster */
+.poster {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* Dark background for a cinema-like feel */
+    color: white;
+    height: 80vh; /* Set the overall carousel container to 85% of the viewport height */
+}
+
+/* Styling for the individual movie posters */
+.posterImage {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Make the image cover 85% of the viewport height */
+    overflow: hidden;
+}
+
+/* Poster images */
+.posterImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the full background */
+}
+
+/* Darker overlay that covers half of the image */
+.posterImage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, .95) 10%, transparent 60%);
+    z-index: 1;
+}
+
+/* Darker bottom overlay with movie details, aligned to the left */
+.posterImage_overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: left;
+    z-index: 2; /* Ensure the content appears above the gradient */
+    margin-bottom: 5%;
+}
+
+/* Movie title styling: bigger and bolder */
+.posterImage_title {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white; /* IMDb-like yellow for the title */
+}
+
+/* Movie runtime and rating styling */
+.posterImage_runtime {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.posterImage_rating {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Movie description styling */
+.posterImage_description {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #ddd;
+    margin-top: 15px;
+    max-width: 50%; /* Limit the width of the description */
+}
+
+/* Remove padding and margins on body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Links for movies */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .posterImage_title {
+        font-size: 32px;
+    }
+    .posterImage_runtime {
+        font-size: 14px;
+    }
+    .posterImage_description {
+        font-size: 14px;
+        max-width: 80%; /* Adjust the description width for smaller screens */
+    }
+}

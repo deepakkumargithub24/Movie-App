@@ -1,0 +1,36 @@
+.movie_list {
+    padding: 20px;
+    background-color: rgb(0, 0, 0); /* Dark background for better contrast */
+    color: white; /* White text for readability */
+}
+
+.list_title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center; /* Center the title */
+    text-transform: uppercase; /* Uppercase letters for the title */
+    color: #f39c12; /* Gold color for the title */
+}
+
+.list_cards {
+    display: flex; /* Use flexbox to arrange cards */
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+    justify-content: center; /* Center cards in the container */
+    gap: 15px; /* Space between cards */
+}
+
+.list_cards .card {
+    flex: 1 1 calc(25% - 15px); /* 4 cards per row with margin adjustments */
+    max-width: 250px; /* Limit the maximum width of each card */
+    transition: transform 0.3s; /* Smooth scale effect on hover */
+}
+
+.list_cards .card:hover {
+    transform: scale(1.05); /* Scale up card on hover */
+}
+
+/* Additional styles for the error message */
+.error-message {
+    color: red; /* Red text for error messages */
+    text-align: center; /* Center the error message */
+}
