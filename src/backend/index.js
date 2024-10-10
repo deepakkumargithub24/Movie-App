@@ -52,7 +52,7 @@ app.get('/movie/:id', async (req, res) => {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNGZjZDgxZWZmYWJiY2I2MjhmMDUyNzVhNGE0YzcwMSIsIm5iZiI6MTcyMTk3MjE5My44NDM3MDQsInN1YiI6IjY2YTFiZGQ2ZWI1YjUzMGIzYWNmN2JjMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.R9AGhgERVpJEQkTDhb90o_K3wVq_TfpOA3yDSaVzDMk' // Replace with a valid TMDB API key
+      Authorization: process.env.AUTHORIZATION // Replace with a valid TMDB API key
     }
   };
 
